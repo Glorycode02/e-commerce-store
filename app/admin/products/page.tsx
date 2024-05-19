@@ -1,15 +1,13 @@
-
 import PageHeader from '@/app/admin/_components/PageHeader'
 import prisma from '@/app/db/db'
 import { Button } from '@/components/ui/button'
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import { formatCurrency, formatNumber } from '@/lib/formatters'
 import { CheckCircle2, Edit, MoreVertical, Trash, XCircle } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import { ActiveToggleDropdownItem, DeleteDropdownItem } from './_components/ProductActions'
-import { DropdownMenuSeparator } from '@radix-ui/react-dropdown-menu'
 
 export default function Products() {
   return (
