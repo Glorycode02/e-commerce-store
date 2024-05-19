@@ -56,4 +56,7 @@ export async function deleteProduct(id: string) {
     const product = await prisma.product.delete({ where: { id } })
 
     if (product === null) return notFound()
+
+    await fs.unlink(product.filePath)
+    await fs.unlink(`public${product.imagePath}`)
 }
